@@ -1,4 +1,4 @@
-from TrungtinBlog import  app
+from TrungtinBlog import app
 
 if __name__ == '__main__':
     app.run(debug = True)
