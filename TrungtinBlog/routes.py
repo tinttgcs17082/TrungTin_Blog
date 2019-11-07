@@ -118,7 +118,6 @@ def post(post_id):
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
-    c
     form = PostForm()
     if form.validate_on_submit():
         post.title = form.title.data
