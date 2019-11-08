@@ -13,7 +13,7 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
-
+# config mail
 app.config['MAIL_SERVER']= 'smtp.office365.com'
 app.config['MAIL_PORT']= 587
 app.config['MAIL_USE_TLS']= True
@@ -24,6 +24,8 @@ mail = Mail(app)
 from TrungtinBlog.users.routes import users
 from TrungtinBlog.posts.routes import posts
 from TrungtinBlog.main.routes import main
+from TrungtinBlog.errors.handlers import errors
 app.register_blueprint(users)
 app.register_blueprint(posts)
 app.register_blueprint(main)
+app.register_blueprint(errors)
